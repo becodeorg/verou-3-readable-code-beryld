@@ -2,12 +2,8 @@
 
     function orderPizza($pizzaType, $client) 
     {
-        echo 'Creating new order... <br>';
-        $Message = 'A ';
-        $Message .= $pizzaType;
-        $price = calc_cts($pizzaType);
-        $address = 'unknown';
-        
+        $price = priceList($pizzaType);
+
             if($client == 'koen'){
                 $address = 'a yacht in Antwerp';
             } elseif($client == 'manuele'){
@@ -16,35 +12,30 @@
             $address = 'BeCode office';
             }
         
-        $Message .=   ' pizza should be sent to ' . $client . ". <br>The address: {$address}.";
-        echo $Message; echo '<br>';
-        echo'The bill is €'.$price.'.<br>';
-        echo "Order finished.<br><br>";
+        echo $Message = 'Creating new order... <br> A ' . $pizzaType .  ' pizza should be sent to ' . $client . ". <br>The address: {$address}. <br>The bill is €$price.<br> Order Finished <br><br>";
+        //Here could delete the variable but maybe it's better to keep it, in case your website need to place it somewhere else
     }
 
   
     
 
-    function calc_cts($pizzaType)
-    {
+    function priceList($pizzaType)
+    {   
         if ($pizzaType == 'marguerita') {
             $price = 5;
-        }else
-        {
-            if ($pizzaType == 'golden')
-            {
-                $price = 100;
-            }
-            if ($pizzaType == 'calzone')
-            {
-                $price = 10;
-            }
-            if ($pizzaType == 'hawaii') {
-                $price = 1000;
-                // throw new Exception('Computer says no'); SORRY I LIKE HAWAII !
-            }
         }
-    
+        if ($pizzaType == 'golden')
+        {
+            $price = 100;
+        }
+        if ($pizzaType == 'calzone')
+        {
+            $price = 10;
+        }
+        if ($pizzaType == 'hawaii') {
+            $price = 1000;
+            // throw new Exception('Computer says no'); SORRY I LIKE HAWAII !
+        }
         return $price;
     }
 
