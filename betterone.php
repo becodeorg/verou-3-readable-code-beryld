@@ -34,7 +34,7 @@
         }
         if ($pizzaType == 'hawaii') {
             $price = 1000;
-            // throw new Exception('Computer says no'); SORRY I LIKE HAWAII !
+            // throw new Exception('Computer says no'); SORRY I LIKE HAWAII ! !! 
         }
         return $price;
     }
@@ -58,15 +58,3 @@
 
 
 
-/*
-function : 
-
-        ordr_pz
-        total_price
-        calc_cts
-        prdr_piz_all
-        make_Allhappy 
-
-
-
-*/
