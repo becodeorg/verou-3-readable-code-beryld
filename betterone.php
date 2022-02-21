@@ -58,6 +58,24 @@ function ordr_pz($pizzatype, $fw)
         return $cst;
     }
 
+
+    function ordr_piz_all()
+        {
+            $test= 0;
+                ordr_pz('calzone', 'koen');
+                ordr_pz('marguerita', 'manuele');
+                ordr_pz('golden', 'students');
+        }
+    
+    function make_Allhappy($do_it) 
+    {
+        if ($do_it) {
+            ordr_piz_all();
+        } 
+    }
+
+    make_Allhappy(true);
+
 ?>
 
 
